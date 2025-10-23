@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.joblib
+
+# Virtual envs
+.venv/
+env/
+
+# Data
+data/
+reports/
+models/
+
+# OS
+.DS_Store
+Thumbs.db

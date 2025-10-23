@@ -1,0 +1,46 @@
+assets:
+  # Metals – futures (jobb elérhetőség)
+  - GC=F    # Gold
+  # - XAUEUR=X # Gold Spot (EUR)
+  - SI=F    # Silver
+  - PL=F    # Platinum
+  - PA=F    # Palladium
+  # Indices
+  - ^GDAXI  # DAX (csak 1D)
+  - QQQ     # Nasdaq100 ETF (van intraday)
+  # FX (csak 1D a YF-en jellemzően)
+  - EURCHF=X
+  - EURGBP=X
+  - EURJPY=X
+  - EURNOK=X
+  - EURUSD=X
+  - GBPCHF=X
+  - GBPJPY=X
+  - GBPUSD=X
+  - USDCHF=X
+  - USDJPY=X
+  - USDMXN=X
+  - AUDJPY=X
+  - AUDNZD=X
+  - CHFJPY=X
+  - NZDJPY=X
+  # Crypto (Binance, 4h+1d)
+  - BTCUSDT
+  - ETHUSDT
+  - DOGEUSDT
+  - SOLUSDT
+  - XRPUSDT
+timeframes: ["4h","1d"]
+
+model: "corrnet"          # "corrnet" | "logreg" | "rf"
+variant: "base_news"      # feature-variáns
+fee_bps: 1
+hold: 0.40
+
+# küszöb tuning tartománya (később csiszoljuk)
+th_from: 0.55
+th_to: 0.70
+th_step: 0.01
+
+# hírek→feature merge ablaka
+news_window_hours: 24
